@@ -42,12 +42,7 @@ const ShoppingListDetail = () => {
   if (!list)
     return (
       <div className="not-found-container">
-        <h2>
-          Oops, <span>s</span>omething went wrong.
-        </h2>
-        <Link to="/" className="vytvorit">
-          Return to Home
-        </Link>
+        <h2>Loading...</h2>
       </div>
     );
 

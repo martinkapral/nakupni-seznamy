@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  padding: 10px;
+
+  background: rgb(246, 181, 181);
+  background: linear-gradient(
+    135deg,
+    rgba(246, 181, 181, 1) 0%,
+    rgba(255, 205, 205, 1) 25%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.App {
+  overflow: scroll;
+
+  max-width: 600px;
+  margin: auto;
+  margin-top: 1rem;
+
+  background-color: #fcfcfc;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  max-height: 85vh;
+
+  box-shadow: 0 2px 5px #c3c2c2;
+  border-radius: 1rem;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 span {
+  color: #cc0000;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 span {
+  color: #cc0000;
+}
+
+.vytvorit {
+  color: black;
+  font: inherit;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding: 10px 20px;
+
+  border: 1px solid #d1d0d0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.upravit {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 1rem;
+  color: black;
+
+  border: 1px solid #d1d0d0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.smazat {
+  font: inherit;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding: 10px 20px;
+
+  border: 1px solid #c58e8e;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f4d5d5;
+}
+
+.nakupni-seznamy {
+  margin-top: 4rem;
+}
+
+.seznamy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: blue;
+}
+
+.item {
+  max-width: 500px;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+
+.vytvorit-input {
+  color: black;
+  font: inherit;
+
+  text-decoration: none;
+  padding: 10px 20px;
+
+  border: 1px solid #d1d0d0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.vytvorit-button {
+  color: black;
+  font: inherit;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding: 10px 20px;
+
+  border: 1px solid #d1d0d0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  display: flex;
+  margin: auto;
+}
+
+.pridat-input {
+  color: black;
+  font: inherit;
+
+  text-decoration: none;
+  padding: 10px 20px;
+
+  border: 1px solid #d1d0d0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.pridat-button {
+  color: black;
+  font: inherit;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding: 10px 20px;
+
+  border: 1px solid #d1d0d0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  display: flex;
+  margin: auto;
+}
+
+.polozka {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.smazat-item {
+  font: inherit;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding: 0px 10px;
+  padding-top: 9px;
+  padding-bottom: 5px;
+
+  border: 1px solid #c58e8e;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f4d5d5;
+}
+
+.back {
+  font-size: 1.2rem;
+  padding-top: 10px;
+  color: black;
+  font: inherit;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: 0;
+  border-top: 0.5px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    max-width: 200px;
+
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .item {
+    max-width: 200px;
+
+    word-wrap: break-word;
+  }
+
+  .App {
+    padding: 20px;
+  }
+
+  .upravit {
+    font-size: 0.8rem;
+  }
+
+  .smazat {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item {
+    max-width: 145px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .item {
+    max-width: 80px;
+  }
+}

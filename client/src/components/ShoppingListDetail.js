@@ -42,7 +42,7 @@ const ShoppingListDetail = () => {
   if (!list)
     return (
       <div className="not-found-container">
-        <h2>Loading...</h2>
+        <h2>Načítání...</h2>
       </div>
     );
 

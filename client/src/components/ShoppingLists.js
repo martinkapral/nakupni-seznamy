@@ -7,6 +7,7 @@ const ShoppingLists = () => {
 
   useEffect(() => {
     axios
+      // GET ALL SHOPPING LISTS
       .get("https://nakupni-seznamy-backend.onrender.com/api/lists")
       .then((response) => setLists(response.data))
       .catch((error) => console.error(error));
@@ -14,6 +15,7 @@ const ShoppingLists = () => {
 
   const deleteList = (id) => {
     axios
+      // DELETE REQUEST TO REMOVE LIST BY ID
       .delete(`https://nakupni-seznamy-backend.onrender.com/api/lists/${id}`)
       .then(() => setLists(lists.filter((list) => list.id !== id)))
       .catch((error) => console.error(error));

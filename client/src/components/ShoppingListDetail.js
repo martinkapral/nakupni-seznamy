@@ -11,12 +11,15 @@ const ShoppingListDetail = () => {
 
   useEffect(() => {
     axios
+      // GET REQUEST TO FETCH BY ID
       .get(`https://nakupni-seznamy-backend.onrender.com/api/lists/${id}`)
       .then((response) => setList(response.data))
       .catch((error) => console.error(error));
   }, [id]);
 
   const addItem = () => {
+    // IF newItem EXISTS AND NOT ALREADY IN THE LIST
+    // (NEMOZE BYT DUPLICITNY ITEM)
     if (newItem && !list.items.includes(newItem)) {
       axios
         .post(
@@ -31,6 +34,7 @@ const ShoppingListDetail = () => {
 
   const removeItem = (item) => {
     axios
+      // DELETE ITEM FROM THE LIST
       .delete(
         `https://nakupni-seznamy-backend.onrender.com/api/lists/${id}/items`,
         { data: { item } }
@@ -39,6 +43,8 @@ const ShoppingListDetail = () => {
       .catch((error) => console.error(error));
   };
 
+  // LOADING STATE
+  // Loading... KYM CAKA NA DATA
   if (!list)
     return (
       <div className="not-found-container">

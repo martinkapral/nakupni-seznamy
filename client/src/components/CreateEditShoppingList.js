@@ -8,6 +8,7 @@ const CreateEditShoppingList = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    // IF ID IS PRESENT - GET request to fetch data
     if (id) {
       axios
         .get(`https://nakupni-seznamy-backend.onrender.com/api/lists/${id}`)
@@ -18,6 +19,7 @@ const CreateEditShoppingList = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // IF ID IS PRESENT - UPRAVIT
     if (id) {
       axios
         .put(`https://nakupni-seznamy-backend.onrender.com/api/lists/${id}`, {
@@ -25,7 +27,9 @@ const CreateEditShoppingList = () => {
         })
         .then(() => history.push("/"))
         .catch((error) => console.error(error));
-    } else {
+    }
+    // IF ID IS NOT PRESENT - VYTVORIT
+    else {
       axios
         .post("https://nakupni-seznamy-backend.onrender.com/api/lists", {
           name,
@@ -41,6 +45,7 @@ const CreateEditShoppingList = () => {
         &#x2190; Zpět
       </Link>
       <h2>
+        {/* IF ID IS/IS NOT PRESENT - ZMENIT/VYTVORIT */}
         {id ? "Změnit" : "Vytvořit"} nákupní <span>s</span>eznam
       </h2>
       <div className="zmenit-form">
@@ -50,11 +55,11 @@ const CreateEditShoppingList = () => {
             type="text"
             value={name}
             placeholder="Název seznamu"
-            // maxlength="12"
             onChange={(e) => setName(e.target.value)}
             required
           />
           <button type="submit" className="vytvorit-button">
+            {/* IF ID IS/IS NOT PRESENT - ZMENIT/VYTVORIT */}
             {id ? "Změnit název" : "Vytvořit"}
           </button>
         </form>
